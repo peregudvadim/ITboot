@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="1" author="Vadim Peregud">
+        <comment>create table employee</comment>
+        <sql>
+            CREATE TABLE employee
+            (
+                id          BIGINT AUTO_INCREMENT PRIMARY KEY,
+                last_name   VARCHAR(40) NOT NULL,
+                first_name  VARCHAR(20) NOT NULL,
+                middle_name VARCHAR(40),
+                email       VARCHAR(50) NOT NULL UNIQUE,
+                position    VARCHAR(40) NOT NULL
+            );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

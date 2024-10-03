@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="3" author="Vadim Peregud">
+        <comment>create table employee_project</comment>
+        <sql>
+            CREATE TABLE employee_project
+            (
+                project_id  BIGINT NOT NULL,
+                employee_id BIGINT NOT NULL
+            );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
